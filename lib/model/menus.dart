@@ -28,9 +28,9 @@ var menusList = [
     openTime: '09:00 - 22:00',
     imageAsset: 'images/waroeangsteak.jpg',
     imageUrls: [
-      'https://www.google.com/search?q=waroeng+steak+uber&source=lmns&bih=974&biw=1903&rlz=1C1YTUH_enID1056ID1056&hl=id&sa=X&ved=2ahUKEwiJk-mY1p2EAxUQfGwGHUHbAq8Q0pQJKAB6BAgBEAI#lpc=lpc&prid=1082589108356521254',
-      'https://www.google.com/search?q=waroeng+steak+uber&source=lmns&bih=974&biw=1903&rlz=1C1YTUH_enID1056ID1056&hl=id&sa=X&ved=2ahUKEwiJk-mY1p2EAxUQfGwGHUHbAq8Q0pQJKAB6BAgBEAI#lpc=lpc&prid=6465973967021647466',
-      'https://www.google.com/search?q=waroeng+steak+uber&source=lmns&bih=974&biw=1903&rlz=1C1YTUH_enID1056ID1056&hl=id&sa=X&ved=2ahUKEwiJk-mY1p2EAxUQfGwGHUHbAq8Q0pQJKAB6BAgBEAI#lpc=lpc&prid=5807178201485171794'
+      'https://assets-pergikuliner.com/Er-eDFQvnP_pg21u67F8IqC0PuY=/945x0/smart/filters:watermark(https://assets-pergikuliner.com/assets/pegimakan-logo-3e147c56e232f471596371920946ae65.png,-0,-3,10):no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/2818723/picture-1675786111.png',
+      'https://4.bp.blogspot.com/-aArnpGAJYgE/WMZ3d7GqccI/AAAAAAAAAyA/qevziladFJInrTqflqi3hfmTm5mjT12lwCLcB/s1600/waroengsteak.jpg',
+      'https://fastly.4sqi.net/img/general/600x600/3698866_P-LPuS5t5D8WyH5O83CsVbpvfbJRm-e8VSQLrLNd-vc.jpg'
     ],
   ),
   menus(
@@ -92,7 +92,7 @@ var menusList = [
         'Berada di JL.A.H. Nasution bersebelahan dengan zone23, menyediakan ayam geprek dengan mengambil sendiri nasi dan pilihan ayamnya kita hanya perlu memilih sambel ayng diinginkan karena di ayam geprek pangeran banyak pilihan sambelnya, disini kalian bisa ambil minum sepuasnya lohh dan nasipun sepuasnyaa',
     openDays: 'Open Saturday - Thursday',
     openTime: '09:00 - 22.00',
-    imageAsset: 'images/agr.jpg',
+    imageAsset: 'images/geprek_pangeran.jpg',
     imageUrls: [],
   ),
 ];

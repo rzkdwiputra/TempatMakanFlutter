@@ -14,11 +14,9 @@ class DetailScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Stack(
               children: <Widget>[
-                Image.asset(place.imageAsset),
                 SafeArea(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

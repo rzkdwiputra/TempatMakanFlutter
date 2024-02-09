@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:project/main_screen.dart';
 
-class loginscreen extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  State<loginscreen> createState() => _loginscreen();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _loginscreen extends State<loginscreen> {
-  TextEditingController usernameCotroller = TextEditingController();
-  TextEditingController passwordCotroller = TextEditingController();
+class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,
-        colors: [
-          Colors.blue,
-          Colors.red,
-        ],
-      )),
+        gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          colors: [
+            Colors.blue,
+            Colors.red,
+          ],
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: _page(),
@@ -30,36 +31,38 @@ class _loginscreen extends State<loginscreen> {
   }
 
   Widget _page() {
-    return Padding(
+    return SingleChildScrollView(
+      child: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(height: 50.0),
             _icon(),
             const SizedBox(height: 50.0),
-            _inputField(
-              "Username",
-              usernameCotroller,
-            ),
+            _inputField("Username", usernameController),
             const SizedBox(height: 50.0),
-            _inputField("Password", passwordCotroller, isPassword: true),
+            _inputField("Password", passwordController, isPassword: true),
             const SizedBox(height: 50.0),
             _loginBtn(),
           ],
-        ));
+        ),
+      ),
+    );
   }
 
   Widget _icon() {
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 2),
-          shape: BoxShape.circle),
+        border: Border.all(color: Colors.white, width: 2),
+        shape: BoxShape.circle,
+      ),
       child: const Icon(Icons.person, color: Colors.white, size: 120),
     );
   }
 
   Widget _inputField(String hintText, TextEditingController controller,
-      {isPassword = false}) {
+      {bool isPassword = false}) {
     var border = OutlineInputBorder(
       borderRadius: BorderRadius.circular(18),
       borderSide: const BorderSide(color: Colors.white),
@@ -80,19 +83,22 @@ class _loginscreen extends State<loginscreen> {
   Widget _loginBtn() {
     return ElevatedButton(
       onPressed: () {
-        debugPrint("Username :" + usernameCotroller.text);
-        debugPrint("Password :" + passwordCotroller.text);
+        debugPrint("Username :" + usernameController.text);
+        debugPrint("Password :" + passwordController.text);
 
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => MainScreen()));
+          context,
+          MaterialPageRoute(builder: (context) => MainScreen()),
+        );
       },
       child: const SizedBox(
-          width: double.infinity,
-          child: Text(
-            "Sign in",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20),
-          )),
+        width: double.infinity,
+        child: Text(
+          "Sign in",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
         primary: Color.fromARGB(225, 228, 226, 226),
